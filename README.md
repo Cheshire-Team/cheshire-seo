@@ -5,16 +5,16 @@
 
 ## Installation
 
-To install `cheshire-seo`, run the following command in your project:
+To install `@vacjs/cheshire-seo`, run the following command in your project:
 
 ```bash
-npm install cheshire-seo
+npm install @vacjs/cheshire-seo
 ```
 
 or
 
 ```bash
-yarn add cheshire-seo
+yarn add @vacjs/cheshire-seo
 ```
 
 ## Basic Usage
@@ -27,7 +27,7 @@ In the simplest form, you can set up the title, description, and keywords meta t
 
 ```tsx
 import React from 'react';
-import CheshireSEO from 'cheshire-seo';
+import CheshireSEO from '@vacjs/cheshire-seo';
 
 const App = () => {
   return (
@@ -61,7 +61,7 @@ You can also configure additional SEO properties like Open Graph, Twitter cards,
 
 ```tsx
 import React from 'react';
-import CheshireSEO from 'cheshire-seo';
+import CheshireSEO from '@vacjs/cheshire-seo';
 
 const App = () => {
   return (
@@ -114,7 +114,7 @@ For more advanced use cases, you can add custom structured data, language settin
 
 ```tsx
 import React from 'react';
-import CheshireSEO from 'cheshire-seo';
+import CheshireSEO from '@vacjs/cheshire-seo';
 
 const App = () => {
   return (
