@@ -1,6 +1,6 @@
 {
   "name": "@vacjs/cheshire-seo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "is a simple and flexible SEO configuration package for React. It helps you easily manage SEO-related meta tags for your application, including Open Graph, Twitter, structured data, and more.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
