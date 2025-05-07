@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import {
   Title,
   Description,
@@ -36,7 +37,7 @@ const CheshireSEO: React.FC<CheshireSEOProps> = ({
   favicon
 }) => {
   return (
-    <head>
+    <Head>
       {Title(title)}
       {Description(description)}
       {Keywords(keywords)}
@@ -52,7 +53,7 @@ const CheshireSEO: React.FC<CheshireSEOProps> = ({
       {AlternateLanguages(alternateLanguages)}
       {FacebookAppId(facebookAppId)}
       {StructuredData(structuredData)}
-    </head>
+    </Head>
   );
 };
 

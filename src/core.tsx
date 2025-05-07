@@ -1,7 +1,6 @@
 import React from 'react';
 import { CheshireSEOProps, FaviconConfig } from './types';
 
-// Função de validação para Structured Data
 const isValidStructuredData = (data: any): boolean => {
   try {
     JSON.stringify(data);
@@ -27,7 +26,7 @@ export function Description(text?: string) {
 
 export function Keywords(value?: string | string[]) {
   if (!value) return null;
-  const content = Array.isArray(value) ? value.join(', ') : value;
+  const content = typeof value === 'string' ? value : value.join(', ');
   return <meta name="keywords" content={content} />;
 }
 
@@ -56,7 +55,6 @@ export function OpenGraph(openGraph?: CheshireSEOProps['openGraph']) {
     fallbackImage = true
   } = openGraph;
 
-  // Limita a 5 imagens (limite recomendado pelo Facebook)
   const imagesToRender = images.slice(0, 5);
   const hasImages = imagesToRender.length > 0;
   const shouldRenderFallback = fallbackImage && !hasImages && url;
@@ -69,7 +67,6 @@ export function OpenGraph(openGraph?: CheshireSEOProps['openGraph']) {
       {url && <meta property="og:url" content={url} />}
       {siteName && <meta property="og:site_name" content={siteName} />}
       
-      {/* Imagens */}
       {hasImages && imagesToRender.map((image, index) => (
         <React.Fragment key={index}>
           <meta property="og:image" content={image.url} />
@@ -79,7 +76,6 @@ export function OpenGraph(openGraph?: CheshireSEOProps['openGraph']) {
         </React.Fragment>
       ))}
       
-      {/* Fallback image usando a URL canônica */}
       {shouldRenderFallback && <meta property="og:image" content={url} />}
 
       {video && <meta property="og:video" content={video} />}
